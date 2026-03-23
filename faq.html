@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes - Safe Mobo</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        body, main, header, button, svg {
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        #theme-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .rotated-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased bg-gray-100 dark:bg-gray-900">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <div class="max-w-4xl mx-auto flex justify-end mb-4">
+            <button id="theme-toggle-btn" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900">
+                <svg id="theme-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" />
+                </svg>
+                <span class="sr-only">Alternar tema</span>
+            </button>
+        </div>
+
+        <main class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-10 rounded-2xl shadow-lg">
+
+            <header class="mb-8">
+                <p class="text-sm text-blue-700 dark:text-blue-400 font-semibold mb-1 tracking-wide uppercase">Centro de ajuda</p>
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">Perguntas Frequentes</h1>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Última atualização: 19 de novembro de 2025</p>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                    Encontre respostas rápidas sobre como o <strong class="dark:text-gray-100">Safe Mobo</strong> protege seu celular. Clique em uma pergunta para ver os detalhes.
+                </p>
+            </header>
+
+            <section class="space-y-3 md:space-y-4" role="list">
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 font-semibold">1</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O que o Safe Mobo faz?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Entenda como o app te protege.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            O Safe Mobo é um aplicativo que protege seu celular de forma inteligente. Ele usa seus dispositivos Bluetooth (como fones de ouvido, relógios ou o sistema de som do carro) como uma "chave de segurança". Se seu celular perder conexão com um desses dispositivos, o Safe Mobo bloqueia a tela imediatamente, impedindo o uso indevido caso seja uma situação de risco (furto ou roubo, por exemplo).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">2</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Como o bloqueio funciona na prática?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Entenda a proteção por Bluetooth.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            É simples: você escolhe quais dos seus dispositivos Bluetooth (como seu fone de ouvido, relógio ou o sistema de som do carro) o Safe Mobo deve "monitorar". Se você se afastar muito desse dispositivo, ou se ele for desligado, o Safe Mobo entende que algo está errado e bloqueia a tela do seu celular na hora. Assim, mesmo que alguém pegue seu celular, não conseguirá usar seus dados (a menos que tenham posse do seu PIN/senha/padrão).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">3</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Posso escolher quais dispositivos são monitorados?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Você está no controle.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Sim. Você escolhe quais dos seus dispositivos já conectados ao celular devem ser monitorados. Apenas a desconexão desses dispositivos vai ativar o bloqueio automático. Você pode adicionar ou remover dispositivos da lista quando quiser, direto nas configurações do app.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">4</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O Safe Mobo gasta muita bateria?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Impacto no uso diário.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Não, o consumo de bateria é muito baixo. O Safe Mobo não fica "procurando" seus dispositivos o tempo todo. Ele usa um recurso do próprio Android que avisa quando um dispositivo é desconectado. É como ter um porteiro que só age quando alguém sai, em vez de ficar vigilando a porta sem parar. O consumo pode variar um pouco dependendo do seu celular e de quantos dispositivos você está monitorando.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">5</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O que fazer se a tela não bloquear?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Passos para resolver problemas.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-3 pl-1">
+                            <li><strong>Verifique as permissões:</strong> O Safe Mobo precisa da sua permissão para bloquear a tela. Abra o app e confirme se todas as permissões necessárias estão ativadas.</li>
+                            <li><strong>Confira sua lista de dispositivos:</strong> Veja se o dispositivo que desconectou está na lista de monitoramento do Safe Mobo.</li>
+                            <li><strong>Desative a "economia de bateria" para o Safe Mobo:</strong> Alguns celulares tentam economizar bateria fechando apps que rodam em segundo plano. Vá nas configurações de bateria do seu Android e garanta que o Safe Mobo possa funcionar sem restrições.</li>
+                            <li><strong>Reinicie o celular:</strong> Um bom e velho "desligar e ligar" pode resolver o problema. Se nada der certo, tente reinstalar o aplicativo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">6</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Preciso de internet para o app funcionar?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Uso offline.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Não. A proteção do Safe Mobo funciona 100% offline, diretamente no seu celular. Você só precisa de internet para baixar o app pela primeira vez, receber atualizações ou entrar em contato com nosso suporte.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800" role="listitem" data-accordion>
+                    <button class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl" aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">7</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Como faço para desativar ou desinstalar?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Pause ou remova o app.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-3 pl-1">
+                            <li><strong>Desativar temporariamente:</strong> Abra o app e pause a proteção para o dispositivo monitorado. Assim o bloqueio automático fica suspenso até você reativar.</li>
+                            <li><strong>Desinstalar o app:</strong> No Android, toque e segure o ícone do Safe Mobo e escolha <em>Desinstalar</em> (ou vá em Configurações &gt; Apps &gt; Safe Mobo &gt; Desinstalar). Isso encerra a proteção imediatamente.</li>
+                            <li><strong>Dica de segurança:</strong> Remover dispositivos ou desativar a proteção reduz a segurança. Reative quando possível para continuar protegido.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-8">
+                Não encontrou sua resposta? Envie seu feedback pelo aplicativo. Sua opinião nos ajuda a melhorar a proteção do Safe Mobo!
+            </p>
+
+        </main>
+
+    </div>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('theme-toggle-btn');
+            const icon = document.getElementById('theme-icon');
+            const html = document.documentElement;
+
+            function updateIconState() {
+                if (!html.classList.contains('dark')) {
+                    icon.classList.add('rotated-icon');
+                } else {
+                    icon.classList.remove('rotated-icon');
+                }
+            }
+
+            updateIconState();
+
+            btn.addEventListener('click', function() {
+                html.classList.toggle('dark');
+
+                if (html.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+
+                updateIconState();
+            });
+        })();
+
+        const accordionItems = document.querySelectorAll('[data-accordion]');
+
+        let openItem = null;
+
+        function addActiveBg(item) {
+            item.classList.add('bg-gray-50');
+            item.classList.add('dark:bg-gray-900');
+        }
+
+        function removeActiveBg(item) {
+            item.classList.remove('bg-gray-50');
+            item.classList.remove('dark:bg-gray-900');
+        }
+
+        function closeItem(item) {
+            const button = item.querySelector('[data-accordion-button]');
+            const content = item.querySelector('[data-accordion-content]');
+            const icon = item.querySelector('[data-accordion-icon]');
+            button.setAttribute('aria-expanded', 'false');
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+            removeActiveBg(item);
+        }
+
+        function openItemFn(item) {
+            const button = item.querySelector('[data-accordion-button]');
+            const content = item.querySelector('[data-accordion-content]');
+            const icon = item.querySelector('[data-accordion-icon]');
+            button.setAttribute('aria-expanded', 'true'); /* Corrected line */
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+            addActiveBg(item);
+        }
+
+        accordionItems.forEach((item) => {
+            const button = item.querySelector('[data-accordion-button]');
+
+            button.addEventListener('click', () => {
+                const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+                if (isOpen) {
+                    closeItem(item);
+                    openItem = null;
+                    return;
+                }
+
+                if (openItem && openItem !== item) {
+                    closeItem(openItem);
+                }
+
+                openItemFn(item);
+                openItem = item;
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>
