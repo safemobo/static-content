@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso - Safe Mobo</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class' // Habilita o modo escuro baseado em classe
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        body, main, header, button, svg {
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        #theme-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .rotated-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased bg-gray-100 dark:bg-gray-900">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <div class="max-w-4xl mx-auto flex justify-end mb-4">
+            <button id="theme-toggle-btn" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900">
+                <svg id="theme-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" />
+                </svg>
+                <span class="sr-only">Alternar tema</span>
+            </button>
+        </div>
+
+        <main class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-10 rounded-2xl shadow-lg">
+
+            <h1 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">Termos de Uso</h1>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Última atualização: 12 de novembro de 2025</p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-6 mb-4">1. Aceitação dos Termos</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Bem-vindo ao <strong class="dark:text-gray-100">Safe Mobo</strong> ("Aplicativo"). Estes Termos de Uso ("Termos") regem seu uso do nosso aplicativo móvel. Ao baixar, instalar ou usar o Safe Mobo, você concorda em cumprir e aceitar integralmente estes Termos. Se você não concorda com qualquer parte dos termos, não deve usar o Aplicativo, e preferivelmente, deve desinstalá-lo.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">2. Descrição do Serviço e Objetivo</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O Safe Mobo é um aplicativo de utilidade e segurança. Sua função principal é monitorar o status da conexãode dispositivos Bluetooth que foram pré-selecionados pelo usuário (como fones de ouvido, smartwatches, etc.), a fim de <strong>detectar a desconexão imediata</strong> destes.
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O <strong class="dark:text-gray-100">objetivo</strong> do Aplicativo é inibir o uso não autorizado do aparelho em situações de furto ou roubo, acionando o bloqueio imediato da tela do dispositivo Android assim que uma desconexão Bluetooth monitorada for detectada.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">3. Isenção de Responsabilidade e Limitações</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Esta é a cláusula mais importante destes Termos. Você reconhece e concorda que:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li>O Safe Mobo é fornecido "COMO ESTÁ" e "CONFORME DISPONÍVEL". Não oferecemos nenhuma garantia de que o Aplicativo funcionará ininterruptamente, sem erros, ou que sempre conseguirá bloquear a tela com sucesso.</li>
+                <li>A funcionalidade do Aplicativo depende de fatores fora do nosso controle, incluindo, mas não se limitando a: restrições do sistema operacional Android, gerenciamento de bateria do dispositivo, interferência no sinal Bluetooth, e o correto funcionamento do hardware do seu celular.</li>
+                <li>O Aplicativo é uma <strong class="dark:text-gray-100">ferramenta de mitigação e dissuasão</strong>, e <strong class="dark:text-gray-100">NÃO UMA GARANTIA</strong> de segurança. Ele não previne o furto ou roubo do seu dispositivo.</li>
+                <li>Em nenhuma circunstância o(s) desenvolvedor(es) e/ou sócio(s) do Safe Mobo serão responsáveis por qualquer dano direto ou indireto, incluindo, mas não se limitando a: perdas financeiras, roubo de dados, acesso não autorizado a contas, ou qualquer outra perda decorrente da falha do Aplicativo em bloquear a tela do dispositivo.</li>
+                <li>O usuário é o único responsável por manter outras medidas de segurança ativas, como senhas fortes, biometria, PIN, e aplicativos de localização de dispositivos.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">4. Permissões do Aplicativo</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Para seu correto funcionamento, o Safe Mobo necessita de permissões específicas do sistema Android. Ao usar o Aplicativo, você concede permissão para:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li><strong class="dark:text-gray-100">Bluetooth:</strong> Para escanear, identificar e monitorar o status da conexão dos dispositivos selecionados.</li>
+                <li><strong class="dark:text-gray-100">Serviço em Segundo Plano (Background):</strong> Para permitir que o aplicativo monitore as conexões Bluetooth continuamente, mesmo quando não estiver aberto na tela.</li>
+                <li><strong class="dark:text-gray-100">Administrador do Dispositivo (ou Serviço de Acessibilidade):</strong> Esta permissão é <strong class="dark:text-gray-100">essencial</strong> para que o Aplicativo possa executar sua função principal de forçar o bloqueio da tela do dispositivo.</li>
+                <li><strong class="dark:text-gray-100">Notificações:</strong> Usamos notificações para informar o motivo do bloqueio da tela em casos legítimos ou falsos positivos, e também para alertar quando qualquer outra permissão necessária estiver ausente, permitindo uma correção rápida pelo usuário.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">5. Privacidade e Coleta de Dados</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Respeitamos sua privacidade. O Safe Mobo:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li><strong class="dark:text-gray-100">Não coleta</strong> qualquer dado de identificação pessoal (como nome, e-mail, número de telefone ou login) para suas funções principais.</li>
+                <li>A lista de dispositivos Bluetooth selecionados para monitoramento é armazenada <strong class="dark:text-gray-100">exclusivamente no seu dispositivo</strong> (localmente) e não é enviada para nenhum servidor externo.</li>
+            </ul>
+            
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">6. Uso da Bateria</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Por natureza, um aplicativo que roda como um serviço em segundo plano consome recursos do dispositivo, incluindo a bateria. Embora o Safe Mobo seja projetado com otimizações para minimizar o consumo, o monitoramento constante de conexões Bluetooth inevitavelmente impactará a vida útil da bateria. Você reconhece e aceita este consumo de energia.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">7. Limitações de Uso</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Você concorda em não tentar reverter a engenharia, descompilar, modificar ou criar trabalhos derivados baseados no Aplicativo.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">8. Modificações nos Termos</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Reservamo-nos o direito de modificar estes Termos a qualquer momento. Notificaremos sobre alterações significativas através do Aplicativo ou outros meios. O uso contínuo do Safe Mobo após a data de vigência das alterações constituirá sua aceitação dos novos Termos.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">9. Contato</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Se você tiver qualquer dúvida sobre estes Termos de Uso, ou sobre o Aplicativo em si, entre em contato conosco através do nosso site: <strong class="text-blue-600 dark:text-blue-400"><a href="https://safemobo.com.br" class="underline hover:text-blue-500 dark:hover:text-blue-300">safemobo.com.br</a></strong>.
+            </p>
+
+        </main>
+    </div>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('theme-toggle-btn');
+            const icon = document.getElementById('theme-icon');
+            const html = document.documentElement;
+
+            function updateIconState() {
+                if (!html.classList.contains('dark')) {
+                    icon.classList.add('rotated-icon');
+                } else {
+                    icon.classList.remove('rotated-icon');
+                }
+            }
+
+            updateIconState();
+
+            btn.addEventListener('click', function() {
+                html.classList.toggle('dark');
+                
+                if (html.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+                
+                updateIconState();
+            });
+        })();
+    </script>
+
+</body>
+</html>
