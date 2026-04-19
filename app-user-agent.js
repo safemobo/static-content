@@ -1,4 +1,4 @@
-(function() {
+(function () {
     var appPrefix = 'LightFingered-';
     var userAgent = navigator.userAgent || '';
 
