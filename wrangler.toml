@@ -1,0 +1,5 @@
+name = "safemobo-static-content"
+compatibility_date = "2026-04-19"
+
+[assets]
+directory = "./public"
