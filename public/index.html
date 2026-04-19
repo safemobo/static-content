@@ -158,8 +158,8 @@
 
         h1 {
             margin: 0;
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            line-height: 1;
+            font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+            line-height: 1.05;
             letter-spacing: -0.04em;
             font-weight: 800;
         }
@@ -176,6 +176,14 @@
             max-width: 44rem;
             color: var(--muted);
             font-size: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .lead-sub {
+            margin: 12px 0 0;
+            max-width: 44rem;
+            color: var(--muted);
+            font-size: 1.1rem;
             line-height: 1.6;
         }
 
@@ -281,6 +289,13 @@
             border-color: rgba(255, 255, 255, 0.1);
         }
 
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
         .panel h2,
         .panel h3,
         .cta-panel h2 {
@@ -290,29 +305,30 @@
 
         .panel h3 {
             font-size: 1.3rem;
-            margin-top: 24px;
             font-weight: 700;
+            line-height: 1.3;
         }
 
         .panel p,
         .cta-panel p {
-            margin: 16px 0 0;
+            margin: 0;
             color: var(--muted);
             line-height: 1.7;
             font-size: 1.05rem;
         }
 
         .feature-number {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             display: inline-flex;
+            flex-shrink: 0;
             align-items: center;
             justify-content: center;
             border-radius: 14px;
             background: var(--accent-soft);
             color: #8cc4ff;
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border: 1px solid rgba(49, 139, 224, 0.15);
         }
 
@@ -531,13 +547,13 @@
                     </div>
 
                     <h1 id="hero-title">
-                        Seu celular reage
-                        <span class="headline-accent">antes do problema crescer.</span>
+                        Bloqueio inteligente no
+                        <span class="headline-accent">exato momento de risco.</span>
                     </h1>
 
-                    <p class="lead">
-                        O Safe Mobo usa seus dispositivos Bluetooth de confiança como sinal de segurança. Se a conexão
-                        some de repente, a tela pode ser bloqueada automaticamente para reduzir o risco de uso indevido.
+                    <p class="lead">O Safe Mobo usa seus Dispositivos Bluetooth conhecidos como um escudo invisível.</p>
+                    <p class="lead-sub">Pode ser seu fone de ouvido, smartwatch ou som automotivo, por exemplo, dentre outros.
+                        Se  qualquer um deles se desconectar de repente, a tela do seu celular é bloqueada instantaneamente, impedindo o acesso de terceiros.
                     </p>
 
                     <div class="actions">
@@ -555,29 +571,32 @@
 
             <section class="grid" aria-label="Visão geral">
                 <article class="panel">
-                    <span class="feature-number">1</span>
-                    <h3>Sua rotina vira a chave</h3>
+                    <div class="panel-header">
+                        <span class="feature-number">1</span>
+                        <h3>Sua rotina vira a chave</h3>
+                    </div>
                     <p>
-                        Escolha quais dispositivos Bluetooth fazem parte do seu contexto seguro: fones, relógio,
-                        sistema do carro ou outros acessórios que você já usa.
+                        Defina quais dispositivos Bluetooth fazem parte da sua zona de confiança: fones de ouvido, smartwatch ou o som do seu carro.
                     </p>
                 </article>
 
                 <article class="panel">
-                    <span class="feature-number">2</span>
-                    <h3>Se desconectar, ele reage</h3>
+                    <div class="panel-header">
+                        <span class="feature-number">2</span>
+                        <h3>Ação em milissegundos</h3>
+                    </div>
                     <p>
-                        Quando uma desconexão monitorada acontece em um momento de risco, o aplicativo pode acionar o
-                        bloqueio da tela imediatamente.
+                        Se o seu celular for afastado ou roubado enquanto conectado, o aplicativo entra em ação e bloqueia a tela instantaneamente.
                     </p>
                 </article>
 
                 <article class="panel">
-                    <span class="feature-number">3</span>
-                    <h3>Proteção sem complicação</h3>
+                    <div class="panel-header">
+                        <span class="feature-number">3</span>
+                        <h3>Proteção sem atrito</h3>
+                    </div>
                     <p>
-                        A proposta é simples: menos passos, menos demora e uma camada extra de resposta quando você mais
-                        precisa proteger o aparelho.
+                        Uma solução simples e invisível que adiciona uma camada de segurança vital, agindo silenciosamente sem atrapalhar o seu dia a dia.
                     </p>
                 </article>
             </section>
@@ -585,71 +604,69 @@
             <section id="como-funciona" class="section-head">
                 <h2>Como o Safe Mobo entra na sua rotina</h2>
                 <p>
-                    O app foi pensado para ser objetivo. Em vez de criar um fluxo complexo, ele observa sinais do mundo
-                    real e usa isso para agir rápido quando o contexto muda.
+                    Esqueça configurações complexas. O aplicativo observa os sinais que você já emite naturalmente e os utiliza para proteger seus dados pessoais com extrema velocidade.
                 </p>
             </section>
 
             <section class="split" aria-label="Detalhes de funcionamento">
                 <div class="stack">
                     <article class="panel">
-                        <span class="feature-number">01</span>
-                        <h3>Conecte e escolha</h3>
+                        <div class="panel-header">
+                            <span class="feature-number">01</span>
+                            <h3>Conecte e escolha</h3>
+                        </div>
                         <p>
-                            Primeiro, você define quais dispositivos Bluetooth devem ser monitorados. A lista pode ser
-                            ajustada sempre que quiser, de acordo com seu uso diário.
+                            Primeiro, você define quais dos seus acessórios Bluetooth deverão atuar como gatilhos de segurança. A lista é sua e pode ser alterada a qualquer momento.
                         </p>
                     </article>
 
                     <article class="panel">
-                        <span class="feature-number">02</span>
-                        <h3>O app acompanha em segundo plano</h3>
+                        <div class="panel-header">
+                            <span class="feature-number">02</span>
+                            <h3>Monitoramento invisível</h3>
+                        </div>
                         <p>
-                            O Safe Mobo fica atento ao estado dessas conexões para identificar uma perda inesperada sem
-                            transformar a experiência em algo pesado ou invasivo.
+                            Enquanto você usa o aparelho normalmente, o Safe Mobo acompanha a conexão em segundo plano, projetado para consumir o mínimo possível de bateria.
                         </p>
                     </article>
 
                     <article class="panel">
-                        <span class="feature-number">03</span>
-                        <h3>Bloqueio quando o contexto muda</h3>
+                        <div class="panel-header">
+                            <span class="feature-number">03</span>
+                            <h3>Bloqueio automático</h3>
+                        </div>
                         <p>
-                            Se a conexão monitorada for interrompida, o aplicativo pode bloquear a tela e dificultar o
-                            acesso imediato ao aparelho por outra pessoa.
+                            Ocorreu uma desconexão abrupta enquanto a tela estava ligada? O sistema intervém no mesmo segundo, bloqueando a tela e forçando a digitação da sua senha ou biometria.
                         </p>
                     </article>
                 </div>
 
                 <article class="panel">
-                    <h3>Pensado para o mundo real</h3>
-                    <p>
-                        A proposta do Safe Mobo não é substituir todas as camadas de segurança do Android. Ele funciona
-                        como um reforço prático para diminuir o tempo de reação quando algo foge do esperado.
+                    <h3 style="margin-top: 0;">Pensado para o mundo real</h3>
+                    <p style="margin-top: 16px;">
+                        O Safe Mobo atua como a última e mais rápida linha de defesa contra imprevistos, fechando a janela de oportunidade que criminosos procuram em celulares desbloqueados.
                     </p>
 
                     <ul class="bullet-list">
                         <li>
                             <span aria-hidden="true"></span>
                             <div>
-                                <strong>Funciona offline</strong>
-                                A proteção principal acontece no próprio aparelho e não depende de internet ativa para
-                                bloquear a tela.
+                                <strong>Independente de internet</strong>
+                                Todo o processamento de segurança acontece localmente no seu aparelho. O aplicativo nunca dependerá da nuvem para proteger sua tela.
                             </div>
                         </li>
                         <li>
                             <span aria-hidden="true"></span>
                             <div>
-                                <strong>Você continua no controle</strong>
-                                Os dispositivos monitorados são escolhidos por você, e a lista pode ser ajustada de
-                                acordo com a sua rotina.
+                                <strong>Privacidade total</strong>
+                                Nós não temos acesso aos seus dados. O Safe Mobo reage apenas a eventos do sistema Bluetooth e não rastreia nem armazena sua localização.
                             </div>
                         </li>
                         <li>
                             <span aria-hidden="true"></span>
                             <div>
-                                <strong>Complementa outras proteções</strong>
-                                PIN, senha, biometria e localização continuam importantes. O Safe Mobo entra como uma
-                                resposta rápida adicional.
+                                <strong>Complemento perfeito</strong>
+                                Senhas e biometria impedem a entrada; o Safe Mobo garante que o aparelho seja trancado caso escape das suas mãos destravado.
                             </div>
                         </li>
                     </ul>
@@ -658,10 +675,9 @@
 
             <section class="cta-panel" aria-label="Próximos passos">
                 <div class="cta-panel-content">
-                    <h2>Quer entender melhor antes de usar?</h2>
+                    <h2>Pronto para elevar a segurança do seu aparelho?</h2>
                     <p>
-                        Acesse as perguntas frequentes para ver detalhes de funcionamento, permissões, bateria e uso
-                        offline. Se precisar, os Termos de Uso também estão disponíveis.
+                        Consulte nossas perguntas frequentes para tirar qualquer dúvida sobre o impacto na bateria, permissões ou o funcionamento offline.
                     </p>
                 </div>
 
