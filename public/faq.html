@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perguntas Frequentes - Safe Mobo</title>
+    <meta name="description" content="Perguntas frequentes do Safe Mobo: veja como a protecao por Bluetooth funciona, permissoes, bateria, uso offline e solucao de problemas.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
 
     <script>
         tailwind.config = {
@@ -51,6 +44,18 @@
 
         .app-user-agent [data-hide-for-app] {
             display: none;
+        }
+
+        .app-user-agent #theme-toggle-btn {
+            position: relative;
+            top: auto;
+            right: auto;
+            float: right;
+            margin: 0 0 1rem 1rem;
+        }
+
+        .app-user-agent header {
+            padding-right: 0;
         }
     </style>
 </head>
@@ -317,34 +322,6 @@
     </div>
 
     <script>
-            (function () {
-                const btn = document.getElementById('theme-toggle-btn');
-                const icon = document.getElementById('theme-icon');
-                const html = document.documentElement;
-
-                function updateIconState() {
-                    if (!html.classList.contains('dark')) {
-                        icon.classList.add('rotated-icon');
-                    } else {
-                        icon.classList.remove('rotated-icon');
-                    }
-                }
-
-                updateIconState();
-
-                btn.addEventListener('click', function () {
-                    html.classList.toggle('dark');
-
-                    if (html.classList.contains('dark')) {
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        localStorage.setItem('theme', 'light');
-                    }
-
-                    updateIconState();
-                });
-            })();
-
         const accordionItems = document.querySelectorAll('[data-accordion]');
 
         let openItem = null;
