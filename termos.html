@@ -24,7 +24,9 @@
             darkMode: 'class' // Habilita o modo escuro baseado em classe
         }
     </script>
-    
+
+    <script src="app-user-agent.js"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -37,6 +39,9 @@
         }
         .rotated-icon {
             transform: rotate(180deg);
+        }
+        .app-user-agent [data-hide-for-app] {
+            display: none;
         }
     </style>
 </head>
@@ -55,7 +60,7 @@
 
         <main class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-10 rounded-2xl shadow-lg">
 
-            <h1 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">Termos de Uso</h1>
+            <h1 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2" data-hide-for-app>Termos de Uso</h1>
 
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Última atualização: 12 de novembro de 2025</p>
 

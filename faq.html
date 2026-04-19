@@ -25,6 +25,8 @@
         }
     </script>
 
+    <script src="app-user-agent.js"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -37,6 +39,9 @@
         }
         .rotated-icon {
             transform: rotate(180deg);
+        }
+        .app-user-agent [data-hide-for-app] {
+            display: none;
         }
     </style>
 </head>
@@ -57,7 +62,7 @@
 
             <header class="mb-8">
                 <p class="text-sm text-blue-700 dark:text-blue-400 font-semibold mb-1 tracking-wide uppercase">Centro de ajuda</p>
-                <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">Perguntas Frequentes</h1>
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100" data-hide-for-app>Perguntas Frequentes</h1>
                 <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Última atualização: 19 de novembro de 2025</p>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
                     Encontre respostas rápidas sobre como o <strong class="dark:text-gray-100">Safe Mobo</strong> protege seu celular. Clique em uma pergunta para ver os detalhes.
