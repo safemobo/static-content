@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safe Mobo - Protecao automatica para o seu celular</title>
+    <title>Safe Mobo - Proteção automática para o seu celular</title>
     <meta name="description"
-        content="O Safe Mobo bloqueia seu celular automaticamente quando um dispositivo Bluetooth monitorado se desconecta. Entenda como a protecao funciona.">
+        content="O Safe Mobo bloqueia seu celular automaticamente quando um dispositivo Bluetooth monitorado se desconecta. Entenda como a proteção funciona.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -16,15 +16,15 @@
             color-scheme: dark;
             --bg: #0b0d11;
             --bg-soft: #10151d;
-            --panel: rgba(20, 27, 37, 0.88);
+            --panel: rgba(20, 27, 37, 0.7);
             --panel-strong: #121a24;
-            --border: rgba(148, 163, 184, 0.16);
+            --border: rgba(148, 163, 184, 0.12);
             --text: #f8fafc;
             --muted: #9aa9bd;
             --accent: #318be0;
             --accent-strong: #2478c7;
-            --accent-soft: rgba(49, 139, 224, 0.16);
-            --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+            --accent-soft: rgba(49, 139, 224, 0.12);
+            --shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
             --radius-xl: 32px;
             --radius-lg: 24px;
             --radius-md: 18px;
@@ -44,8 +44,9 @@
             font-family: "Inter", sans-serif;
             color: var(--text);
             background:
-                radial-gradient(circle at top, rgba(49, 139, 224, 0.14), transparent 28%),
+                radial-gradient(circle at top center, rgba(49, 139, 224, 0.15), transparent 40%),
                 linear-gradient(180deg, #090b0e 0%, #0b0d11 40%, #0f141b 100%);
+            background-attachment: fixed;
         }
 
         a {
@@ -56,7 +57,7 @@
         .shell {
             width: min(1120px, calc(100% - 32px));
             margin: 0 auto;
-            padding: 28px 0 56px;
+            padding: 32px 0 64px;
         }
 
         .topbar {
@@ -64,40 +65,41 @@
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 36px;
+            margin-bottom: 64px;
         }
 
         .brand {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 0.02em;
         }
 
         .brand-mark {
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             border-radius: 12px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(180deg, rgba(59, 130, 246, 0.24), rgba(37, 99, 235, 0.4));
             border: 1px solid rgba(96, 165, 250, 0.3);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .top-links {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .top-links a {
-            padding: 10px 14px;
+            padding: 10px 16px;
             border-radius: 999px;
+            font-weight: 500;
             color: var(--muted);
             border: 1px solid transparent;
             transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -105,45 +107,45 @@
 
         .top-links a:hover {
             color: var(--text);
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
             border-color: var(--border);
         }
 
         .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-            gap: 36px;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 28px;
-        }
-
-        .hero-copy,
-        .hero-preview,
-        .panel,
-        .cta-panel {
-            background: var(--panel);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(14px);
+            text-align: center;
+            margin-bottom: 80px;
         }
 
         .hero-copy {
-            padding: 40px;
+            padding: 64px 40px;
             border-radius: var(--radius-xl);
+            background: var(--panel);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+            max-width: 860px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 10px 14px;
+            padding: 8px 16px;
             border-radius: 999px;
             color: #b8d9ff;
             background: var(--accent-soft);
-            border: 1px solid rgba(49, 139, 224, 0.22);
-            font-size: 0.92rem;
+            border: 1px solid rgba(49, 139, 224, 0.2);
+            font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 12px rgba(49, 139, 224, 0.1);
         }
 
         .eyebrow-dot {
@@ -151,71 +153,93 @@
             height: 8px;
             border-radius: 50%;
             background: var(--accent);
-            box-shadow: 0 0 0 6px rgba(49, 139, 224, 0.14);
+            box-shadow: 0 0 0 4px rgba(49, 139, 224, 0.15);
         }
 
         h1 {
             margin: 0;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            line-height: 0.98;
-            letter-spacing: -0.05em;
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            font-weight: 800;
         }
 
         .headline-accent {
-            color: #6eb3ff;
+            background: linear-gradient(135deg, #6eb3ff 0%, #318be0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .lead {
-            margin: 22px 0 0;
-            max-width: 34rem;
+            margin: 28px 0 0;
+            max-width: 44rem;
             color: var(--muted);
-            font-size: 1.08rem;
-            line-height: 1.75;
+            font-size: 1.25rem;
+            line-height: 1.6;
         }
 
         .actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 30px;
+            gap: 16px;
+            margin-top: 40px;
+            justify-content: center;
         }
 
         .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: 54px;
-            padding: 0 22px;
+            min-height: 56px;
+            padding: 0 28px;
             border-radius: 999px;
-            font-weight: 700;
-            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .button:hover {
-            transform: translateY(-1px);
+            transform: scale(1.02);
+        }
+
+        .button:active {
+            transform: scale(0.98);
         }
 
         .button-primary {
-            background: linear-gradient(180deg, #3f96ea 0%, #2f85d7 100%);
+            background: linear-gradient(180deg, #429dff 0%, #2b7dd1 100%);
             color: white;
-            box-shadow: 0 12px 28px rgba(49, 139, 224, 0.28);
+            box-shadow: 0 12px 24px rgba(49, 139, 224, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(49, 139, 224, 0.5);
+        }
+        
+        .button-primary:hover {
+            box-shadow: 0 16px 32px rgba(49, 139, 224, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         .button-secondary {
             border: 1px solid var(--border);
             color: var(--text);
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
         }
 
         .micro-points {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 24px;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
             padding: 0;
             list-style: none;
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         .micro-points li {
@@ -225,132 +249,36 @@
         }
 
         .micro-points span {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.22);
-        }
-
-        .hero-preview {
-            padding: 18px;
-            border-radius: 36px;
-        }
-
-        .phone {
-            min-height: 720px;
-            padding: 26px 24px 28px;
-            border-radius: 30px;
-            background:
-                radial-gradient(circle at top, rgba(49, 139, 224, 0.1), transparent 26%),
-                linear-gradient(180deg, #0e1014 0%, #13161b 100%);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .status-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 700;
-            font-size: 0.95rem;
-            letter-spacing: 0.01em;
-        }
-
-        .status-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.78);
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .battery {
-            padding: 4px 10px;
-            border-radius: 999px;
-            color: #fff;
-            background: #1db954;
-            font-size: 0.9rem;
-            font-weight: 800;
-        }
-
-        .phone-body {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 34px;
-        }
-
-        .shield-wrap {
-            width: 220px;
-            height: 220px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(49, 139, 224, 0.18) 0%, rgba(49, 139, 224, 0.04) 52%, transparent 70%);
-        }
-
-        .shield-wrap svg {
-            width: 150px;
-            height: 150px;
-            filter: drop-shadow(0 18px 40px rgba(49, 139, 224, 0.2));
-        }
-
-        .phone-copy {
-            max-width: 16rem;
-            margin: 0;
-            color: var(--accent);
-            font-size: clamp(1.6rem, 3vw, 2.4rem);
-            font-weight: 800;
-            line-height: 1.24;
-            letter-spacing: -0.04em;
-        }
-
-        .pager {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .pager span {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-        .pager span.is-active {
             background: var(--accent);
-        }
-
-        .phone-button {
-            width: 100%;
-            min-height: 72px;
-            border: 0;
-            border-radius: 999px;
-            background: linear-gradient(180deg, #3f96ea 0%, #2f85d7 100%);
-            color: #fff;
-            font-size: 1.2rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
-            margin-top: 18px;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .panel,
+        .cta-panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(14px);
         }
 
         .panel {
-            padding: 28px;
+            padding: 40px;
             border-radius: var(--radius-lg);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .panel:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.1);
         }
 
         .panel h2,
@@ -361,169 +289,212 @@
         }
 
         .panel h3 {
-            font-size: 1.18rem;
-            margin-top: 18px;
+            font-size: 1.3rem;
+            margin-top: 24px;
+            font-weight: 700;
         }
 
         .panel p,
         .cta-panel p {
-            margin: 14px 0 0;
+            margin: 16px 0 0;
             color: var(--muted);
-            line-height: 1.75;
+            line-height: 1.7;
+            font-size: 1.05rem;
         }
 
         .feature-number {
-            width: 42px;
-            height: 42px;
+            width: 48px;
+            height: 48px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            border-radius: 14px;
             background: var(--accent-soft);
             color: #8cc4ff;
             font-weight: 800;
+            font-size: 1.2rem;
+            border: 1px solid rgba(49, 139, 224, 0.15);
         }
 
         .section-head {
-            margin: 72px 0 0;
-            max-width: 38rem;
+            margin: 100px auto 40px;
+            max-width: 42rem;
+            text-align: center;
         }
 
         .section-head h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.05;
-            letter-spacing: -0.05em;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
             margin: 0;
+            font-weight: 800;
         }
 
         .section-head p {
-            margin: 16px 0 0;
+            margin: 20px 0 0;
             color: var(--muted);
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
         .split {
             display: grid;
             grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-            gap: 18px;
-            margin-top: 18px;
+            gap: 24px;
+            margin-top: 24px;
         }
 
         .stack {
             display: grid;
-            gap: 18px;
+            gap: 24px;
         }
 
         .bullet-list {
-            margin: 18px 0 0;
+            margin: 24px 0 0;
             padding: 0;
             list-style: none;
             display: grid;
-            gap: 16px;
+            gap: 20px;
         }
 
         .bullet-list li {
             display: flex;
-            gap: 14px;
+            gap: 16px;
             align-items: flex-start;
         }
 
         .bullet-list span {
-            width: 12px;
-            height: 12px;
-            margin-top: 7px;
+            width: 10px;
+            height: 10px;
+            margin-top: 8px;
             border-radius: 50%;
             background: var(--accent);
-            box-shadow: 0 0 0 8px rgba(49, 139, 224, 0.1);
+            box-shadow: 0 0 0 6px rgba(49, 139, 224, 0.15);
             flex: 0 0 auto;
         }
 
         .bullet-list strong {
             display: block;
-            margin-bottom: 6px;
-            font-size: 1.02rem;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: var(--text);
         }
 
         .cta-panel {
-            margin-top: 18px;
-            padding: 30px;
-            border-radius: var(--radius-lg);
+            margin-top: 60px;
+            padding: 48px;
+            border-radius: var(--radius-xl);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 32px;
             flex-wrap: wrap;
+            background: linear-gradient(135deg, rgba(20, 27, 37, 0.8) 0%, rgba(20, 27, 37, 0.95) 100%);
+            border: 1px solid rgba(49, 139, 224, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.5;
+        }
+
+        .cta-panel-content {
+            flex: 1;
+            min-width: 300px;
         }
 
         .cta-panel h2 {
-            font-size: 1.7rem;
+            font-size: 2rem;
+            font-weight: 800;
         }
 
         .footer {
             display: flex;
             justify-content: space-between;
-            gap: 18px;
+            gap: 24px;
             flex-wrap: wrap;
             align-items: center;
-            margin-top: 26px;
-            padding: 10px 4px 0;
+            margin-top: 80px;
+            padding: 32px 0 0;
+            border-top: 1px solid var(--border);
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 16px;
+            gap: 24px;
             flex-wrap: wrap;
+        }
+        
+        .footer-links a:hover {
+            color: var(--text);
         }
 
         @media (max-width: 980px) {
-            .hero,
             .grid,
             .split {
                 grid-template-columns: 1fr;
-            }
-
-            .phone {
-                min-height: 620px;
             }
         }
 
         @media (max-width: 640px) {
             .shell {
-                width: min(100% - 24px, 1120px);
-                padding-top: 20px;
-                padding-bottom: 40px;
+                width: min(100% - 32px, 1120px);
+                padding-top: 24px;
+                padding-bottom: 48px;
+            }
+
+            .topbar {
+                margin-bottom: 40px;
             }
 
             .topbar,
             .footer {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
             }
 
-            .hero-copy,
-            .panel,
+            .hero-copy {
+                padding: 40px 24px;
+            }
+            
+            .hero {
+                margin-bottom: 56px;
+            }
+
+            .panel {
+                padding: 32px 24px;
+            }
+
             .cta-panel {
-                padding: 24px;
+                padding: 32px 24px;
+                flex-direction: column;
+                text-align: center;
             }
-
-            .hero-preview {
-                padding: 12px;
-                border-radius: 28px;
+            
+            .actions {
+                width: 100%;
+                flex-direction: column;
             }
-
-            .phone {
-                min-height: 560px;
-                padding: 22px 18px 22px;
+            
+            .button {
+                width: 100%;
             }
-
-            .phone-copy {
-                max-width: 14rem;
-            }
-
-            .phone-button {
-                min-height: 64px;
+            
+            .micro-points {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
             }
         }
     </style>
@@ -534,7 +505,7 @@
         <header class="topbar">
             <a class="brand" href="index.html" aria-label="Safe Mobo">
                 <span class="brand-mark" aria-hidden="true">
-                    <svg viewBox="0 0 64 64" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 64 64" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M32 5L50.5 12.2V29.4C50.5 41.1 43 51.8 32 56.5C21 51.8 13.5 41.1 13.5 29.4V12.2L32 5Z"
                             fill="#3B8FE1" />
@@ -556,7 +527,7 @@
                 <div class="hero-copy">
                     <div class="eyebrow">
                         <span class="eyebrow-dot" aria-hidden="true"></span>
-                        Protecao automatica para Android
+                        Proteção automática para Android
                     </div>
 
                     <h1 id="hero-title">
@@ -565,66 +536,30 @@
                     </h1>
 
                     <p class="lead">
-                        O Safe Mobo usa seus dispositivos Bluetooth de confianca como sinal de seguranca. Se a conexao
+                        O Safe Mobo usa seus dispositivos Bluetooth de confiança como sinal de segurança. Se a conexão
                         some de repente, a tela pode ser bloqueada automaticamente para reduzir o risco de uso indevido.
                     </p>
 
                     <div class="actions">
-                        <a class="button button-primary" href="#como-funciona">Como funciona</a>
-                        <a class="button button-secondary" href="faq.html">Ver FAQ</a>
+                        <a class="button button-primary" href="#como-funciona">Entenda como funciona</a>
+                        <a class="button button-secondary" href="faq.html">Ver as dúvidas comuns</a>
                     </div>
 
                     <ul class="micro-points" aria-label="Destaques">
-                        <li><span aria-hidden="true"></span>Funciona offline</li>
-                        <li><span aria-hidden="true"></span>Baixo impacto no uso diario</li>
-                        <li><span aria-hidden="true"></span>Voce escolhe os dispositivos monitorados</li>
+                        <li><span aria-hidden="true"></span>Funciona totalmente offline</li>
+                        <li><span aria-hidden="true"></span>Baixo impacto na bateria</li>
+                        <li><span aria-hidden="true"></span>Você escolhe os dispositivos</li>
                     </ul>
-                </div>
-
-                <div class="hero-preview" aria-hidden="true">
-                    <div class="phone">
-                        <div class="status-row">
-                            <span>12:46</span>
-                            <div class="status-right">
-                                <span>154 KB/s</span>
-                                <span class="battery">100</span>
-                            </div>
-                        </div>
-
-                        <div class="phone-body">
-                            <div class="shield-wrap">
-                                <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M110 18L172 43.2V101C172 140.2 146.9 176.2 110 192C73.1 176.2 48 140.2 48 101V43.2L110 18Z"
-                                        fill="#318BE0" />
-                                    <path d="M81 105.1L96.4 120.5L136.2 80.7" stroke="white" stroke-width="18"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-
-                            <p class="phone-copy">
-                                O Safe Mobo bloqueia seu celular automaticamente.
-                            </p>
-
-                            <div class="pager">
-                                <span></span>
-                                <span></span>
-                                <span class="is-active"></span>
-                            </div>
-                        </div>
-
-                        <button class="phone-button" type="button">Comecar</button>
-                    </div>
                 </div>
             </section>
 
-            <section class="grid" aria-label="Visao geral">
+            <section class="grid" aria-label="Visão geral">
                 <article class="panel">
                     <span class="feature-number">1</span>
                     <h3>Sua rotina vira a chave</h3>
                     <p>
-                        Escolha quais dispositivos Bluetooth fazem parte do seu contexto seguro: fones, relogio,
-                        sistema do carro ou outros acessorios que voce ja usa.
+                        Escolha quais dispositivos Bluetooth fazem parte do seu contexto seguro: fones, relógio,
+                        sistema do carro ou outros acessórios que você já usa.
                     </p>
                 </article>
 
@@ -632,16 +567,16 @@
                     <span class="feature-number">2</span>
                     <h3>Se desconectar, ele reage</h3>
                     <p>
-                        Quando uma desconexao monitorada acontece em um momento de risco, o aplicativo pode acionar o
+                        Quando uma desconexão monitorada acontece em um momento de risco, o aplicativo pode acionar o
                         bloqueio da tela imediatamente.
                     </p>
                 </article>
 
                 <article class="panel">
                     <span class="feature-number">3</span>
-                    <h3>Protecao sem complicacao</h3>
+                    <h3>Proteção sem complicação</h3>
                     <p>
-                        A proposta e simples: menos passos, menos demora e uma camada extra de resposta quando voce mais
+                        A proposta é simples: menos passos, menos demora e uma camada extra de resposta quando você mais
                         precisa proteger o aparelho.
                     </p>
                 </article>
@@ -651,7 +586,7 @@
                 <h2>Como o Safe Mobo entra na sua rotina</h2>
                 <p>
                     O app foi pensado para ser objetivo. Em vez de criar um fluxo complexo, ele observa sinais do mundo
-                    real e usa isso para agir rapido quando o contexto muda.
+                    real e usa isso para agir rápido quando o contexto muda.
                 </p>
             </section>
 
@@ -661,8 +596,8 @@
                         <span class="feature-number">01</span>
                         <h3>Conecte e escolha</h3>
                         <p>
-                            Primeiro, voce define quais dispositivos Bluetooth devem ser monitorados. A lista pode ser
-                            ajustada sempre que quiser, de acordo com seu uso diario.
+                            Primeiro, você define quais dispositivos Bluetooth devem ser monitorados. A lista pode ser
+                            ajustada sempre que quiser, de acordo com seu uso diário.
                         </p>
                     </article>
 
@@ -670,8 +605,8 @@
                         <span class="feature-number">02</span>
                         <h3>O app acompanha em segundo plano</h3>
                         <p>
-                            O Safe Mobo fica atento ao estado dessas conexoes para identificar uma perda inesperada sem
-                            transformar a experiencia em algo pesado ou invasivo.
+                            O Safe Mobo fica atento ao estado dessas conexões para identificar uma perda inesperada sem
+                            transformar a experiência em algo pesado ou invasivo.
                         </p>
                     </article>
 
@@ -679,7 +614,7 @@
                         <span class="feature-number">03</span>
                         <h3>Bloqueio quando o contexto muda</h3>
                         <p>
-                            Se a conexao monitorada for interrompida, o aplicativo pode bloquear a tela e dificultar o
+                            Se a conexão monitorada for interrompida, o aplicativo pode bloquear a tela e dificultar o
                             acesso imediato ao aparelho por outra pessoa.
                         </p>
                     </article>
@@ -688,8 +623,8 @@
                 <article class="panel">
                     <h3>Pensado para o mundo real</h3>
                     <p>
-                        A proposta do Safe Mobo nao e substituir todas as camadas de seguranca do Android. Ele funciona
-                        como um reforco pratico para diminuir o tempo de reacao quando algo foge do esperado.
+                        A proposta do Safe Mobo não é substituir todas as camadas de segurança do Android. Ele funciona
+                        como um reforço prático para diminuir o tempo de reação quando algo foge do esperado.
                     </p>
 
                     <ul class="bullet-list">
@@ -697,48 +632,59 @@
                             <span aria-hidden="true"></span>
                             <div>
                                 <strong>Funciona offline</strong>
-                                A protecao principal acontece no proprio aparelho e nao depende de internet ativa para
+                                A proteção principal acontece no próprio aparelho e não depende de internet ativa para
                                 bloquear a tela.
                             </div>
                         </li>
                         <li>
                             <span aria-hidden="true"></span>
                             <div>
-                                <strong>Voce continua no controle</strong>
-                                Os dispositivos monitorados sao escolhidos por voce, e a lista pode ser ajustada de
+                                <strong>Você continua no controle</strong>
+                                Os dispositivos monitorados são escolhidos por você, e a lista pode ser ajustada de
                                 acordo com a sua rotina.
                             </div>
                         </li>
                         <li>
                             <span aria-hidden="true"></span>
                             <div>
-                                <strong>Complementa outras protecoes</strong>
-                                PIN, senha, biometria e localizacao continuam importantes. O Safe Mobo entra como uma
-                                resposta rapida adicional.
+                                <strong>Complementa outras proteções</strong>
+                                PIN, senha, biometria e localização continuam importantes. O Safe Mobo entra como uma
+                                resposta rápida adicional.
                             </div>
                         </li>
                     </ul>
                 </article>
             </section>
 
-            <section class="cta-panel" aria-label="Proximos passos">
-                <div>
+            <section class="cta-panel" aria-label="Próximos passos">
+                <div class="cta-panel-content">
                     <h2>Quer entender melhor antes de usar?</h2>
                     <p>
-                        Acesse as perguntas frequentes para ver detalhes de funcionamento, permissoes, bateria e uso
-                        offline. Se precisar, os Termos de Uso tambem estao disponiveis.
+                        Acesse as perguntas frequentes para ver detalhes de funcionamento, permissões, bateria e uso
+                        offline. Se precisar, os Termos de Uso também estão disponíveis.
                     </p>
                 </div>
 
-                <div class="actions">
-                    <a class="button button-primary" href="faq.html">Ler FAQ</a>
-                    <a class="button button-secondary" href="termos.html">Abrir termos</a>
+                <div class="actions" style="margin-top: 0;">
+                    <a class="button button-primary" href="faq.html">Ler FAQ completo</a>
+                    <a class="button button-secondary" href="termos.html">Abrir termos de uso</a>
                 </div>
             </section>
         </main>
 
         <footer class="footer">
-            <span>Safe Mobo</span>
+            <a class="brand" href="index.html" aria-label="Safe Mobo">
+                <span class="brand-mark" style="width: 24px; height: 24px; border-radius: 6px;" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M32 5L50.5 12.2V29.4C50.5 41.1 43 51.8 32 56.5C21 51.8 13.5 41.1 13.5 29.4V12.2L32 5Z"
+                            fill="#3B8FE1" />
+                        <path d="M23.2 31.3L29 37.1L41.2 24.9" stroke="white" stroke-width="5.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <span>Safe Mobo</span>
+            </a>
             <div class="footer-links">
                 <a href="faq.html">Perguntas frequentes</a>
                 <a href="termos.html">Termos de uso</a>
