@@ -141,11 +141,11 @@
                     </button>
                     <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            É simples: você escolhe quais dos seus dispositivos Bluetooth (como seu fone de ouvido,
-                            smartwatch ou som automotivo) o Safe Mobo deve "monitorar". Se você se afastar muito
-                            desse dispositivo, ou se ele for desligado, o Safe Mobo entende que algo está errado e
-                            bloqueia a tela do seu celular na hora. Assim, mesmo que alguém pegue seu celular, não
-                            conseguirá usar seus dados (a menos que tenham posse do seu PIN/senha/padrão).
+                            É simples: você escolhe quais dos seus dispositivos Bluetooth, como fone de ouvido,
+                            smartwatch ou som automotivo, serão usados para proteção. Se você se afastar desse
+                            dispositivo, ou se ele for desligado, o Safe Mobo detecta a perda de conexão e bloqueia a
+                            tela do seu celular na hora. Assim, mesmo que alguém pegue seu celular, não conseguirá
+                            usá-lo sem seu PIN, senha ou padrão.
                         </p>
                     </div>
                 </div>
@@ -159,9 +159,10 @@
                             <span
                                 class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">3</span>
                             <div class="flex flex-col">
-                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Posso escolher
-                                    quais dispositivos são monitorados?</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-400">Você está no controle.</span>
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O Safe Mobo acessa
+                                    o que passa pelo Bluetooth?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">O app verifica conexão, não
+                                    conteúdo.</span>
                             </div>
                         </div>
                         <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
@@ -171,10 +172,10 @@
                     </button>
                     <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Sim. Você escolhe quais dos seus dispositivos já conectados ao celular devem ser
-                            monitorados. Apenas a desconexão desses dispositivos vai ativar o bloqueio automático. Você
-                            pode adicionar ou remover dispositivos da lista quando quiser, direto nas configurações do
-                            app.
+                            Não. O Safe Mobo não lê mensagens, áudios, arquivos nem qualquer outro conteúdo trafegado
+                            por Bluetooth. Ele apenas verifica se os dispositivos que você escolheu continuam
+                            conectados e reage quando o Android informa uma desconexão. Essas informações ficam no
+                            próprio aparelho e não são enviadas para servidores.
                         </p>
                     </div>
                 </div>
@@ -188,9 +189,9 @@
                             <span
                                 class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">4</span>
                             <div class="flex flex-col">
-                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O Safe Mobo gasta
-                                    muita bateria?</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-400">Impacto no uso diário.</span>
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Posso escolher
+                                    quais dispositivos serão usados para proteção?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Você está no controle.</span>
                             </div>
                         </div>
                         <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
@@ -200,11 +201,9 @@
                     </button>
                     <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Não, o consumo de bateria é muito baixo. O Safe Mobo não fica "procurando" seus dispositivos
-                            o tempo todo. Ele usa um recurso do próprio Android que avisa quando um dispositivo é
-                            desconectado. É como ter um porteiro que só age quando alguém sai, em vez de ficar vigilando
-                            a porta sem parar. O consumo pode variar um pouco dependendo do seu celular e de quantos
-                            dispositivos você está monitorando.
+                            Sim. Você escolhe quais dos seus dispositivos já conectados ao celular serão usados para
+                            proteção. Apenas a desconexão desses dispositivos pode ativar o bloqueio automático. Você
+                            pode adicionar ou remover essa lista quando quiser, direto nas configurações do app.
                         </p>
                     </div>
                 </div>
@@ -217,6 +216,35 @@
                         <div class="flex items-center space-x-3">
                             <span
                                 class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">5</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O Safe Mobo gasta
+                                    muita bateria?</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Impacto no uso diário.</span>
+                            </div>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" data-accordion-icon>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 pt-0 hidden" data-accordion-content>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Não, o consumo de bateria é muito baixo. O Safe Mobo usa um recurso do próprio Android que
+                            avisa quando um dos dispositivos escolhidos para proteção se desconecta, em vez de fazer
+                            buscas constantes por dispositivos. O consumo pode variar um pouco conforme o seu celular e
+                            a quantidade de dispositivos escolhidos para proteção.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
+                    role="listitem" data-accordion>
+                    <button
+                        class="w-full flex items-center justify-between px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-xl"
+                        aria-expanded="false" data-accordion-button>
+                        <div class="flex items-center space-x-3">
+                            <span
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">6</span>
                             <div class="flex flex-col">
                                 <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">O que fazer se a
                                     tela não bloquear?</span>
@@ -236,7 +264,7 @@
                                 bloquear a tela. Abra o app e confirme se todas as permissões necessárias estão
                                 ativadas.</li>
                             <li><strong>Confira sua lista de dispositivos:</strong> Veja se o dispositivo que
-                                desconectou está na lista de monitoramento do Safe Mobo.</li>
+                                desconectou está na lista de dispositivos escolhidos para proteção no Safe Mobo.</li>
                             <li><strong>Desative a "economia de bateria" para o Safe Mobo:</strong> Alguns celulares
                                 tentam economizar bateria fechando apps que rodam em segundo plano. Vá nas configurações
                                 de bateria do seu Android e garanta que o Safe Mobo possa funcionar sem restrições.</li>
@@ -253,7 +281,7 @@
                         aria-expanded="false" data-accordion-button>
                         <div class="flex items-center space-x-3">
                             <span
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">6</span>
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">7</span>
                             <div class="flex flex-col">
                                 <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Preciso de internet
                                     para o app funcionar?</span>
@@ -281,7 +309,7 @@
                         aria-expanded="false" data-accordion-button>
                         <div class="flex items-center space-x-3">
                             <span
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">7</span>
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold">8</span>
                             <div class="flex flex-col">
                                 <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Como faço para
                                     desativar ou desinstalar?</span>
@@ -297,7 +325,7 @@
                         <ul
                             class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-3 pl-1">
                             <li><strong>Desativar temporariamente:</strong> Abra o app e pause a proteção para o
-                                dispositivo monitorado. Assim o bloqueio automático fica suspenso até você reativar.
+                                dispositivo escolhido. Assim o bloqueio automático fica suspenso até você reativar.
                             </li>
                             <li><strong>Desinstalar o app:</strong> No Android, toque e segure o ícone do Safe Mobo e
                                 escolha <em>Desinstalar</em> (ou vá em Configurações &gt; Apps &gt; Safe Mobo &gt;
