@@ -20,44 +20,7 @@
     </script>
 
     <script src="app-user-agent.js"></script>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        body,
-        main,
-        header,
-        button,
-        svg {
-            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-        }
-
-        #theme-icon {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .rotated-icon {
-            transform: rotate(180deg);
-        }
-
-        .app-user-agent [data-hide-for-app] {
-            display: none;
-        }
-
-        .app-user-agent #theme-toggle-btn {
-            position: relative;
-            top: auto;
-            right: auto;
-            float: right;
-            margin: 0 0 1rem 1rem;
-        }
-
-        .app-user-agent header {
-            padding-right: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body class="antialiased bg-gray-100 dark:bg-gray-900">
@@ -297,7 +260,9 @@
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                             Não. O bloqueio automático do SafeMobo funciona 100% offline, diretamente no seu celular.
                             Você só precisa de internet para baixar o app pela primeira vez, receber atualizações ou
-                            entrar em contato com nosso suporte.
+                            enviar e-mail ao suporte em
+                            <a href="mailto:safemoboapp@gmail.com"
+                                class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">safemoboapp@gmail.com</a>.
                         </p>
                     </div>
                 </div>
@@ -339,8 +304,10 @@
             </section>
 
             <p class="text-sm text-gray-500 dark:text-gray-400 mt-8">
-                Não encontrou sua resposta? Envie seu feedback pelo aplicativo. Sua opinião nos ajuda a melhorar a
-                camada de bloqueio do SafeMobo!
+                Não encontrou sua resposta? Envie seu feedback pelo aplicativo ou por e-mail para
+                <a href="mailto:safemoboapp@gmail.com"
+                    class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">safemoboapp@gmail.com</a>.
+                Sua opinião nos ajuda a melhorar o SafeMobo!
             </p>
 
             <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Última atualização: 16 de maio de 2026</p>

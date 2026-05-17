@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+body,
+main,
+header,
+button,
+svg {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+#theme-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotated-icon {
+    transform: rotate(180deg);
+}
+
+.app-user-agent [data-hide-for-app] {
+    display: none;
+}
+
+.app-user-agent #theme-toggle-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.app-user-agent header {
+    padding-right: 0;
+}
