@@ -739,14 +739,32 @@
             }
 
             .topbar {
-                justify-content: flex-end;
+                align-items: center;
+                justify-content: space-between;
                 margin-bottom: 8px;
             }
 
-            .topbar>.brand,
             .platform-badge,
             .top-links {
                 display: none;
+            }
+
+            .topbar>.brand {
+                display: inline-flex;
+            }
+
+            .brand-mark {
+                width: 36px;
+                height: 36px;
+                border-radius: 9px;
+            }
+
+            .brand-kicker {
+                display: none;
+            }
+
+            .brand-name {
+                font-size: 1rem;
             }
 
             .mobile-menu {
