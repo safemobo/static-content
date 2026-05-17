@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - SafeMobo</title>
+    <meta name="description" content="Política de Privacidade do SafeMobo: entenda quais dados o app acessa, coleta, usa, compartilha, armazena e como solicitar suporte ou exclusão.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <script src="app-user-agent.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body,
+        main,
+        header,
+        button,
+        svg {
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+
+        #theme-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rotated-icon {
+            transform: rotate(180deg);
+        }
+
+        .app-user-agent [data-hide-for-app] {
+            display: none;
+        }
+
+        .app-user-agent #theme-toggle-btn {
+            position: relative;
+            top: auto;
+            right: auto;
+            float: right;
+            margin: 0 0 1rem 1rem;
+        }
+
+        .app-user-agent header {
+            padding-right: 0;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-gray-100 dark:bg-gray-900">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <main class="relative max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-10 rounded-2xl shadow-lg">
+
+            <button id="theme-toggle-btn"
+                class="absolute right-8 top-8 md:right-10 md:top-10 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-white dark:focus:ring-offset-gray-800">
+                <svg id="theme-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" />
+                </svg>
+                <span class="sr-only">Alternar tema</span>
+            </button>
+
+            <header class="mb-6 pr-16 md:pr-20">
+                <p class="text-sm text-blue-700 dark:text-blue-400 font-semibold mb-1 tracking-wide uppercase">SafeMobo</p>
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100" data-hide-for-app>Política de Privacidade</h1>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                    Esta Política de Privacidade explica como o <strong class="dark:text-gray-100">SafeMobo</strong>
+                    acessa, coleta, usa, compartilha, armazena e protege dados relacionados ao uso do aplicativo
+                    Android SafeMobo.
+                </p>
+            </header>
+
+            <div class="rounded-xl border border-blue-200 dark:border-blue-900/60 bg-blue-50 dark:bg-blue-950/30 p-5 mb-8">
+                <p class="text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <strong>Resumo:</strong> o SafeMobo usa a conexão Bluetooth e permissões do Android para bloquear a
+                    tela quando um dispositivo Bluetooth confiável se desconecta. A lista dos dispositivos escolhidos
+                    fica no próprio aparelho. Não vendemos dados pessoais, não usamos dados para publicidade e não
+                    acessamos mensagens, arquivos, contatos, fotos, câmera, microfone ou conteúdo trafegado por Bluetooth.
+                </p>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">1. Identificação e contato</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Esta política se aplica ao aplicativo publicado
+                na Google Play sob o nome SafeMobo (com.threeheads.lightfingered). Para dúvidas, solicitações de privacidade, suporte ou pedidos de
+                exclusão, entre em contato pelo e-mail
+                <a href="mailto:safemoboapp@gmail.com" class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">safemoboapp@gmail.com</a>.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">2. Dados que o SafeMobo acessa ou coleta</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O SafeMobo limita-se a utilizar apenas o necessários para entregar suas funções de proteção:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li><strong class="dark:text-gray-100">Dados de Bluetooth:</strong> nome, endereço MAC/identificador do dispositivo pareado, status de conexão e desconexão, e quais dispositivos foram marcados por você como confiáveis para proteção.</li>
+                <li><strong class="dark:text-gray-100">Dados técnicos do aparelho e do app:</strong> versão do app, versão do Android, eventos de funcionamento, estado do serviço em segundo plano, eventos de bloqueio, falhas e logs técnicos.</li>
+                <li><strong class="dark:text-gray-100">Permissões e configurações do Android:</strong> status de permissões de Bluetooth, notificações, administrador do dispositivo, otimização de bateria, inicialização após reinício e credencial/biometria do aparelho.</li>
+                <li><strong class="dark:text-gray-100">Dados de assinatura e compra:</strong> status da assinatura do SafeMobo, data da assinatura, renovação, e ID do pedido quando fornecido pela Google Play.</li>
+                <li><strong class="dark:text-gray-100">Contato de suporte:</strong> endereço de e-mail e conteúdo da mensagem, somente quando você decide enviar feedback ou entrar em contato conosco.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">3. Permissões sensíveis e finalidade</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O SafeMobo pode solicitar permissões sensíveis do Android. Elas são usadas para as finalidades abaixo:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li><strong class="dark:text-gray-100">Bluetooth:</strong> listar dispositivos pareados, identificar os dispositivos escolhidos por você e detectar desconexões.</li>
+                <li><strong class="dark:text-gray-100">Localização aproximada/precisa em versões compatíveis do Android:</strong> algumas versões do Android tratam a descoberta ou leitura de dispositivos Bluetooth como relacionada a localização. O SafeMobo não usa GPS, não rastreia sua localização e não cria histórico de deslocamento.</li>
+                <li><strong class="dark:text-gray-100">Administrador do dispositivo:</strong> permitir que o app execute o bloqueio imediato da tela. O SafeMobo não usa essa permissão para apagar dados, alterar senha ou controlar outros recursos administrativos.</li>
+                <li><strong class="dark:text-gray-100">Serviço em primeiro plano e execução em segundo plano:</strong> continuar observando eventos de Bluetooth mesmo quando o app não está aberto na tela.</li>
+                <li><strong class="dark:text-gray-100">Inicialização após reinício:</strong> reativar o monitoramento quando o aparelho for reiniciado, se a proteção estiver habilitada.</li>
+                <li><strong class="dark:text-gray-100">Notificações:</strong> mostrar o serviço ativo, avisos de bloqueio, falhas ou status da assinatura.</li>
+                <li><strong class="dark:text-gray-100">Biometria ou credencial do dispositivo:</strong> confirmar a identidade do usuário usando o mecanismo seguro do Android. O SafeMobo não recebe nem armazena dados biométricos.</li>
+            </ul>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Divulgação de funcionamento em segundo plano: <strong class="dark:text-gray-100">o SafeMobo acessa e
+                    armazena no aparelho dados dos dispositivos Bluetooth escolhidos por você para permitir o bloqueio
+                    automático da tela quando um desses dispositivos se desconecta, inclusive quando o aplicativo está
+                    fechado ou em segundo plano.</strong>
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">4. Como usamos os dados</h2>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li>Detectar a desconexão de dispositivos Bluetooth confiáveis e bloquear a tela do aparelho.</li>
+                <li>Exibir a lista de dispositivos Bluetooth pareados para que você escolha quais serão monitorados.</li>
+                <li>Manter preferências locais, como tutorial concluído e monitoramento Bluetooth ativado ou pausado.</li>
+                <li>Verificar e manter o status da assinatura por meio da Google Play Billing.</li>
+                <li>Enviar notificações sobre proteção, bloqueio, assinatura e permissões necessárias.</li>
+                <li>Diagnosticar falhas, melhorar estabilidade e investigar erros técnicos por meio de logs e relatórios de falha.</li>
+                <li>Responder mensagens de suporte enviadas voluntariamente por você.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">5. Dados que não coletamos</h2>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li>Não coletamos nome, telefone, endereço, documentos, contatos, SMS, histórico de chamadas, fotos, vídeos, áudio, microfone, câmera ou arquivos pessoais para a função principal do app.</li>
+                <li>Não acessamos o conteúdo transmitido por Bluetooth, como áudio, mensagens, arquivos ou dados de outros aplicativos.</li>
+                <li>Não usamos publicidade no app e não usamos dados para personalização ou medição de anúncios.</li>
+                <li>Não vendemos dados pessoais ou sensíveis.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">6. Compartilhamento com terceiros</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O SafeMobo não vende dados pessoais. Podemos compartilhar ou permitir o tratamento de dados com os
+                seguintes provedores, somente para as finalidades necessárias:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li><strong class="dark:text-gray-100">Google Play Billing:</strong> processa pagamentos, assinaturas, pedidos, renovações e status de compra. A gestão de pagamento ocorre pela Google Play.</li>
+                <li><strong class="dark:text-gray-100">Firebase Crashlytics, da Google:</strong> recebe relatórios de falha, dados técnicos do app e logs de diagnóstico para ajudar a identificar e corrigir problemas.</li>
+                <li><strong class="dark:text-gray-100">Provedores de hospedagem do site:</strong> ao acessar páginas públicas como esta política, dados técnicos de navegação, como endereço IP e user agent, podem ser processados pelo provedor de hospedagem para entregar e proteger o site.</li>
+                <li><strong class="dark:text-gray-100">Autoridades ou obrigações legais:</strong> podemos divulgar dados quando exigido por lei, ordem válida de autoridade competente ou para proteger direitos, segurança e integridade do serviço.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">7. Armazenamento e segurança</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                A lista de dispositivos Bluetooth selecionados, preferências, logs locais e histórico local de assinatura
+                ficam armazenados no armazenamento privado do aplicativo no próprio aparelho. Comunicações com serviços
+                de terceiros, como Google Play e Firebase, são transmitidas por conexões seguras quando realizadas por
+                esses SDKs. Adotamos medidas técnicas razoáveis para limitar acesso indevido, mas nenhum método de
+                transmissão ou armazenamento é absolutamente seguro.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">8. Retenção e exclusão</h2>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-4 pl-4 space-y-2">
+                <li><strong class="dark:text-gray-100">Dados locais:</strong> permanecem no aparelho até você remover dispositivos monitorados no app, limpar os dados do aplicativo nas configurações do Android ou desinstalar o SafeMobo.</li>
+                <li><strong class="dark:text-gray-100">Dados de assinatura:</strong> a Google Play mantém registros de compra conforme as políticas da Google e obrigações legais aplicáveis. O app mantém localmente apenas informações necessárias para verificar e exibir o status da assinatura.</li>
+                <li><strong class="dark:text-gray-100">Relatórios de falha e suporte:</strong> são mantidos pelo tempo necessário para análise, suporte, segurança, cumprimento legal e melhoria do app.</li>
+            </ul>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O SafeMobo não cria uma conta própria dentro do aplicativo. Para solicitar exclusão de dados associados
+                a suporte ou diagnóstico que estejam sob nosso controle, envie um e-mail para
+                <a href="mailto:safemoboapp@gmail.com" class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">safemoboapp@gmail.com</a>.
+                Podemos precisar manter certos dados quando houver obrigação legal, prevenção de fraude, segurança ou
+                defesa de direitos.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">9. Crianças e adolescentes</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                O SafeMobo não é desenvolvido para coletar dados de crianças e não solicita cadastro, perfil público ou
+                dados de identificação para sua função principal. Se você é responsável legal e acredita que uma criança
+                nos forneceu dados pessoais por meio de contato de suporte ou outro canal, envie uma solicitação para
+                <a href="mailto:safemoboapp@gmail.com" class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">safemoboapp@gmail.com</a>.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">10. Alterações nesta política</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                Podemos atualizar esta Política de Privacidade para refletir mudanças no aplicativo, nas leis aplicáveis
+                ou nas exigências das plataformas. Quando houver alterações relevantes, atualizaremos a data desta página
+                e, quando apropriado, avisaremos pelo aplicativo ou por outros meios razoáveis.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mt-8 mb-4">11. Links úteis</h2>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed mb-8 pl-4 space-y-2">
+                <li><a href="/termos" class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">Termos de Uso</a></li>
+                <li><a href="/faq" class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">Perguntas Frequentes</a></li>
+                <li><a href="https://safemobo.com" class="text-blue-700 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300">safemobo.com</a></li>
+            </ul>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">Última atualização: 17 de maio de 2026</p>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
