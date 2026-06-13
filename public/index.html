@@ -79,9 +79,9 @@
         }
 
         .brand-mark {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -89,6 +89,15 @@
             border: 1px solid rgba(96, 165, 250, 0.34);
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
             flex: 0 0 auto;
+            overflow: hidden;
+        }
+
+        .brand-icon {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
         }
 
         .brand-copy {
@@ -955,15 +964,9 @@
 <body>
     <div class="shell">
         <header class="topbar">
-            <a class="brand" href="index.html" aria-label="SafeMobo - página inicial">
+            <a class="brand" href="/" aria-label="SafeMobo">
                 <span class="brand-mark" aria-hidden="true">
-                    <svg viewBox="0 0 64 64" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M32 5L50.5 12.2V29.4C50.5 41.1 43 51.8 32 56.5C21 51.8 13.5 41.1 13.5 29.4V12.2L32 5Z"
-                            fill="#3B8FE1" />
-                        <path d="M23.2 31.3L29 37.1L41.2 24.9" stroke="white" stroke-width="5.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <img class="brand-icon" src="/favicon.png" width="80" height="80" alt="">
                 </span>
                 <span class="brand-copy">
                     <span class="brand-name">SafeMobo</span>
@@ -998,7 +1001,7 @@
                 <div class="hero-copy">
 
                     <h1 id="hero-title">
-                        SafeMobo <span class="headline-accent">limita o acesso indevido aos seus dados.</span>
+                        SafeMobo <span class="headline-accent">proteção definitiva para o roubo de celular destravado.</span>
                     </h1>
 
                     <p class="lead">Se um dispositivo Bluetooth perder conexão abruptamente, o SafeMobo bloqueia a tela do seu Android na hora.</p>
@@ -1103,16 +1106,7 @@
         </main>
 
         <footer class="footer">
-            <a class="brand" href="index.html" aria-label="SafeMobo">
-                <span class="brand-mark brand-mark-small" aria-hidden="true">
-                    <svg viewBox="0 0 64 64" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M32 5L50.5 12.2V29.4C50.5 41.1 43 51.8 32 56.5C21 51.8 13.5 41.1 13.5 29.4V12.2L32 5Z"
-                            fill="#3B8FE1" />
-                        <path d="M23.2 31.3L29 37.1L41.2 24.9" stroke="white" stroke-width="5.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </span>
+            <a class="brand" href="/" aria-label="SafeMobo">
                 <span class="brand-copy">
                     <span class="brand-name">SafeMobo</span>
                 </span>
