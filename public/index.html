@@ -130,30 +130,6 @@
             display: none;
         }
 
-        .platform-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            min-height: 38px;
-            padding: 0 12px;
-            border-radius: 999px;
-            color: #c5f7e6;
-            background: var(--safe-soft);
-            border: 1px solid rgba(32, 210, 154, 0.26);
-            font-size: 0.86rem;
-            font-weight: 700;
-            white-space: nowrap;
-        }
-
-        .platform-badge::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--safe);
-            box-shadow: 0 0 0 4px rgba(32, 210, 154, 0.12);
-        }
-
         .top-links {
             display: flex;
             align-items: center;
@@ -176,16 +152,21 @@
             border-color: var(--border);
         }
 
+        .top-links a.text-white,
+        .top-links a.text-white:hover {
+            color: #fff;
+        }
+
         .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.76fr);
+            /* display: grid; */
+            /* grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.76fr); */
             gap: 44px;
             align-items: center;
             margin-bottom: 76px;
         }
 
         .hero-copy {
-            max-width: 700px;
+            max-width: 920px;
         }
 
         .eyebrow {
@@ -224,7 +205,7 @@
 
         .lead {
             margin: 24px 0 0;
-            max-width: 42rem;
+            /* max-width: 42rem; */
             color: #dce8f6;
             font-size: clamp(1.12rem, 2vw, 1.32rem);
             line-height: 1.55;
@@ -262,13 +243,6 @@
             font-weight: 500;
         }
 
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
         .button {
             display: inline-flex;
             align-items: center;
@@ -287,6 +261,10 @@
 
         .button:active {
             transform: translateY(0);
+        }
+
+        .text-white {
+            color: #fff;
         }
 
         .button-primary {
@@ -311,35 +289,23 @@
             border-color: rgba(255, 255, 255, 0.16);
         }
 
-        .micro-points {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
-            margin: 28px 0 0;
-            padding: 0;
-            list-style: none;
-            color: var(--muted);
-            font-size: 0.94rem;
-            font-weight: 600;
+        .store-cta-link {
+            display: inline-flex;
+            align-self: center;
+            margin-top: 24px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, filter 0.2s ease;
         }
 
-        .micro-points li {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            min-height: 48px;
-            padding: 10px 12px;
-            border-radius: var(--radius);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(148, 163, 184, 0.12);
+        .store-cta-link:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.08);
         }
 
-        .micro-points span {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--safe);
-            flex: 0 0 auto;
+        .store-cta-badge {
+            display: block;
+            width: min(250px, 100%);
+            height: auto;
         }
 
         .hero-preview {
@@ -660,12 +626,14 @@
         }
 
         .cta-panel {
-            margin-top: 60px;
+            margin: 60px 0 96px;
             padding: 40px;
             border-radius: var(--radius);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            text-align: center;
             gap: 32px;
             flex-wrap: wrap;
             background: linear-gradient(135deg, rgba(18, 25, 35, 0.86) 0%, rgba(18, 25, 35, 0.96) 100%);
@@ -673,8 +641,19 @@
         }
 
         .cta-panel-content {
-            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 0 1 auto;
+            width: 100%;
+            max-width: 720px;
             min-width: 280px;
+            text-align: center;
+        }
+
+        .cta-panel .actions {
+            justify-content: center;
+            margin-top: 0;
         }
 
         .cta-panel h2 {
@@ -687,9 +666,6 @@
             margin-top: 12px;
         }
 
-        .cta-actions {
-            margin-top: 0;
-        }
 
         .footer {
             display: flex;
@@ -754,7 +730,6 @@
                 margin-bottom: 8px;
             }
 
-            .platform-badge,
             .top-links {
                 display: none;
             }
@@ -865,21 +840,10 @@
                 font-size: 0.9rem;
             }
 
-            .actions {
-                width: 100%;
-                flex-direction: column;
-                margin-top: 20px;
-            }
-
             .button {
                 width: 100%;
                 min-height: 52px;
                 padding: 0 18px;
-            }
-
-            .micro-points {
-                grid-template-columns: 1fr;
-                margin-top: 18px;
             }
 
             .hero-preview {
@@ -934,18 +898,15 @@
             }
 
             .cta-panel {
+                margin: 44px 0 72px;
                 padding: 26px 20px;
                 flex-direction: column;
-                align-items: stretch;
-                text-align: left;
+                align-items: center;
+                text-align: center;
             }
 
             .cta-panel h2 {
                 font-size: 1.7rem;
-            }
-
-            .cta-actions {
-                margin-top: 0;
             }
 
             .footer {
@@ -974,11 +935,9 @@
             </a>
 
             <div class="topbar-actions">
-                <span class="platform-badge">Somente Android</span>
                 <nav class="top-links" aria-label="Links principais">
                     <a href="/faq">Perguntas frequentes</a>
-                    <a href="/termos">Termos de uso</a>
-                    <a href="/privacidade">Privacidade</a>
+                    <a class="button button-primary text-white" href="https://play.google.com/store/apps/details?id=com.threeheads.lightfingered">Baixe o app</a>
                 </nav>
             </div>
 
@@ -1004,20 +963,27 @@
                         SafeMobo <span class="headline-accent">proteção definitiva para o roubo de celular destravado.</span>
                     </h1>
 
-                    <p class="lead">Se um dispositivo Bluetooth perder conexão abruptamente, o SafeMobo bloqueia a tela do seu Android na hora.</p>
+                    <p class="lead">O SafeMobo usa seus dispositivos confiáveis (smartwatch, fones, som do carro...) como um escudo invisível. Se a conexão Bluetooth for cortada abruptamente pelo distanciamento, seu Android é bloqueado na hora. Seus dados e apps de banco ficam 100% protegidos.</p>
 
-                    <p class="lead-sub">
+                    <!-- <p class="lead-sub">
                         Defina seus dispositivos Bluetooth confiáveis (fones de ouvido, smartwatch, smart ring, som automotivo etc.).
                         Se seu celular perder a conexão com um destes dispositivos, tela do seu
                         celular é bloqueada imediatamente, para limitar o acesso indevido aos seus dados.
-                    </p>
+                    </p> -->
 
-                    <ul class="micro-points" aria-label="Destaques">
-                        <li><span aria-hidden="true"></span>Funciona offline</li>
-                        <li><span aria-hidden="true"></span>Baixo impacto na bateria</li>
-                        <li><span aria-hidden="true"></span>Você define os dispositivos Bluetooth</li>
-                    </ul>
                 </div>
+            </section>
+
+            <section class="cta-panel" aria-label="Baixar o app">
+                <div class="cta-panel-content">
+                    <h2>Baixe o app agora mesmo e previna-se!</h2>
+                    <a class="store-cta-link" href="https://play.google.com/store/apps/details?id=com.threeheads.lightfingered"
+                        target="_blank" rel="noopener noreferrer" aria-label="Baixar SafeMobo no Google Play">
+                        <img class="store-cta-badge" src="/googleplay-250x74.png" width="250" height="74"
+                            alt="Disponível no Google Play">
+                    </a>
+                </div>
+
             </section>
             
             <section id="como-funciona" class="section-head">
@@ -1088,9 +1054,11 @@
                 </article>
             </section>
 
-            <section class="cta-panel" aria-label="Próximos passos">
+            <section class="cta-panel" aria-label="Links Úteis">
                 <div class="cta-panel-content">
-                    <h2>SafeMobo está disponível somente para Android.</h2>
+                    <h2>Não dê chance para o azar</h2>
+                    <p>Baixe o app agora mesmo para ativar o escudo invisível dos dados contidos no seu aparelho: suas contas bancárias, suas mensagens e fotos pessoais, seus documentos, etc.
+                    </p>
                     <p>
                         Veja as perguntas frequentes para entender permissões, bateria, privacidade e o comportamento
                         do bloqueio automático no sistema Android.
@@ -1098,7 +1066,8 @@
                 </div>
 
                 <div class="actions cta-actions">
-                    <a class="button button-primary" href="/faq">Perguntas Frequentes</a>
+                    <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.threeheads.lightfingered">Baixe o app</a>
+                    <a class="button button-secondary" href="/faq">Perguntas Frequentes</a>
                     <a class="button button-secondary" href="/termos">Termos de Uso</a>
                     <a class="button button-secondary" href="/privacidade">Privacidade</a>
                 </div>
